@@ -15,3 +15,4 @@ JavaScript Back-End Course Workshop @SoftUni
 8. Extract partial template
 9. Add services and data layers
 10. Add create page
+11. Add details page
