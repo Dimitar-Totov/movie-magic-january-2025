@@ -23,6 +23,15 @@ router.get('/:movieId/details',async (req,res) => {
     res.render('movies/details',{ movie });
 });
 
+router.get('/search',async (req,res) => {
+
+    const query = req.query;
+    const movies = await movieService.getAll(query);
+
+    res.render('home',{isSearch: true, movies });
+});
+
+
 function getRatingData(rating){
 
     if(!Number.isInteger(rating)){

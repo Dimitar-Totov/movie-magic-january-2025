@@ -18,3 +18,4 @@ JavaScript Back-End Course Workshop @SoftUni
 11. Add create page
 12. Add details page
 13. Add not found page
+14. Add search page
