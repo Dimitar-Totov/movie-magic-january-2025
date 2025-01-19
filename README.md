@@ -19,3 +19,5 @@ JavaScript Back-End Course Workshop @SoftUni
 12. Add details page
 13. Add not found page
 14. Add search page
+15. Install mongoose
+16. Add models
