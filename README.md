@@ -21,3 +21,4 @@ JavaScript Back-End Course Workshop @SoftUni
 14. Add search page
 15. Install mongoose
 16. Add models
+17. Replace database.json with MongoDB

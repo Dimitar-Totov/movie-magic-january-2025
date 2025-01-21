@@ -1,7 +1,15 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
+import mongoose from 'mongoose';
 
 import routes from './routes.js';
+
+try{
+    await mongoose.connect('mongodb://127.0.0.1/JavaScriptBack-End');
+    console.log('Successfully connected');
+} catch(err){
+    console.log(err.message);
+}
 
 const port = 5000;
 const app = express();

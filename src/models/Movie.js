@@ -4,7 +4,7 @@ const movieSchema = new Schema({
     title: String,
     genre: String,
     director: String,
-    date: Number,
+    date: String,
     imageUrl: String,
     rating: Number,
     description: String
@@ -12,4 +12,4 @@ const movieSchema = new Schema({
 
 const Movie = model('Movie',movieSchema);
 
-export default Movie();
+export default Movie;

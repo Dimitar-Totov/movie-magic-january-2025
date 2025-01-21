@@ -1,8 +1,7 @@
-import movieData from "../data/movieData.js";
-import {v4 as uniqueId} from 'uuid';
+import Movie from "../models/Movie.js";
 
-const getAll = async (filter = {}) => {
-    let movies = await movieData.getAll();
+const getAll = async(filter = {}) => {
+    let movies = (await Movie.find()).map(document=>document.toObject());
 
     if(filter.search){
         movies = movies.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
@@ -19,21 +18,10 @@ const getAll = async (filter = {}) => {
     return movies;
 };
 
-const create = (movie) => {
 
-    movie.id = uniqueId();
-    movie.rating = Number(movie.rating);
-    return movieData.create(movie)
-}
-
-const getOne = async (movieId) => {
-    const movies = await movieData.getAll();
-    const currentMovie = movies.find(movie => movie.id == movieId); 
-    return currentMovie;
-}
+const getOne = (movieId) => Movie.findById(movieId,{},{lean: true});
 
 export default {
     getAll,
-    create,
     getOne
 }
