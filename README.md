@@ -20,5 +20,6 @@ JavaScript Back-End Course Workshop @SoftUni
 13. Add not found page
 14. Add search page
 15. Install mongoose
-16. Add models
+16. Add movie model
 17. Replace database.json with MongoDB
+18. Create config with expressSetup and mongooseSetup
