@@ -25,7 +25,7 @@ router.get('/:movieId/details', async(req, res) => {
 router.get('/search', async (req, res) => {
 
     const filter = req.query;
-    const movies = await movieService.getAll(filter);
+    const movies = (await movieService.getAll(filter)).map(document => document.toObject());
 
     res.render('home', { isSearch: true, movies, filter });
 });

@@ -1,21 +1,23 @@
 import Movie from "../models/Movie.js";
 
-const getAll = async(filter = {}) => {
-    let movies = (await Movie.find()).map(document=>document.toObject());
+const getAll = (filter = {}) => {
+    let query = Movie.find();
 
     if(filter.search){
-        movies = movies.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
+        //TODO Add case insensitive functionallity
+        query = query.where({title: filter.search});
     };
 
     if(filter.genre){
-        movies = movies.filter(movie => movie.genre.toLowerCase().includes(filter.genre.toLowerCase()));
+        //TODO Add case insensitive functionallity
+        query = query.where({genre: filter.genre});
     };
 
     if(filter.year){
-        movies = movies.filter(movie => movie.date === filter.year);
+        query = query.where({date: Number(filter.year)});
     }
 
-    return movies;
+    return query;
 };
 
 
