@@ -4,13 +4,11 @@ const getAll = (filter = {}) => {
     let query = Movie.find();
 
     if(filter.search){
-        //TODO Add case insensitive functionallity
-        query = query.where({title: filter.search});
+        query = query.where({title: { $regex: filter.search, $options: 'i'}});
     };
 
     if(filter.genre){
-        //TODO Add case insensitive functionallity
-        query = query.where({genre: filter.genre});
+        query = query.where({genre: { $regex: filter.genre, $options: 'i'}});
     };
 
     if(filter.year){
