@@ -1,6 +1,7 @@
 import { Router } from "express";
 import movieService from "../services/movieService.js";
 import Movie from "../models/Movie.js";
+import castService from '../services/castService.js'
 
 const router = Router();
 
@@ -16,6 +17,7 @@ router.post('/create', async (req, res) => {
 router.get('/:movieId/details', async(req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId);
+    //const casts = await castService.getCasts().lean();
 
     movie.ratingView = getRatingData(movie.rating);
     res.render('movies/details', { movie })
