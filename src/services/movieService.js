@@ -1,3 +1,4 @@
+import Cast from "../models/Cast.js";
 import Movie from "../models/Movie.js";
 
 const getAll = (filter = {}) => {
@@ -19,7 +20,7 @@ const getAll = (filter = {}) => {
 };
 
 
-const getOne = (movieId) => Movie.findById(movieId,{},{lean: true});
+const getOne = (movieId) => Movie.findById(movieId,{},{lean: true}).populate('casts');
 
 export default {
     getAll,
