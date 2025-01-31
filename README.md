@@ -23,3 +23,6 @@ JavaScript Back-End Course Workshop @SoftUni
 16. Add movie model
 17. Replace database.json with MongoDB
 18. Create config with expressSetup and mongooseSetup
+19. Install cookie parser
+20. Install bcrypt
+21. Install jswebtoken
