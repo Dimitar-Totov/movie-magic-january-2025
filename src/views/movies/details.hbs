@@ -18,8 +18,10 @@
                 </div>
 
                 <p class="disc">Description: {{movie.description}}</p>
-                <div>
-                    <a href="/cast/attach/{{movie._id}} " class="details" >Attach</a>
+                <div class="details-btn">
+                    <button id="edit-button">Edit</button>
+                    <button id="delete-button">Delete</button>
+                    <a href="/cast/attach/{{movie._id}} " class="details">Attach</a>
                 </div>
             </div>
         </div>
