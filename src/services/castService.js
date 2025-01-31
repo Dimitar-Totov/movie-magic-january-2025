@@ -3,8 +3,8 @@ import Movie from "../models/Movie.js";
 
 const getAll = () => Cast.find();
 
-const getOne = (actorName) => {
-    return Cast.findOne({'name': actorName});
+const getOne = (actorId) => {
+    return Cast.findOne({'_id': actorId});
 }
 
 const addCast = (movieId,actorData) => {
