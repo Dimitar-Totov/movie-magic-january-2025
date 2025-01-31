@@ -16,17 +16,16 @@ router.post('/create',async(req,res) => {
 });
 
 router.get('/attach/:movieId',async (req,res) => {
-    const casts = await castService.getAll().lean();
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId);
 
-    res.render('cast/cast-attach', {movie, casts});  
+    res.render('cast/cast-attach', {movie});  
 });
 
 router.post('/attach/:movieId',async (req,res) => {
-    const actorName = req.body.cast;
+    const castId = req.body.cast;
     const movieId = req.params.movieId;
-    const actorData = await castService.getOne(actorName);
+    const actorData = await castService.getOne(castId);
     await castService.addCast(movieId,actorData);
 
     res.redirect(`/movies/${movieId}/details`);
