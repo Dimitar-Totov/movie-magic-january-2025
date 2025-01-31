@@ -1,4 +1,3 @@
-import Cast from "../models/Cast.js";
 import Movie from "../models/Movie.js";
 
 const getAll = (filter = {}) => {
