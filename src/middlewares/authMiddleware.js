@@ -13,6 +13,8 @@ export const authMiddleware = (req, res, next) => {
     try{
         const decodedToken = jwt.verify(token,SECRET);
         req.user = decodedToken;
+        //* All templates have acces to user
+        res.locals.user = decodedToken;
 
         next();
     } catch(err){
