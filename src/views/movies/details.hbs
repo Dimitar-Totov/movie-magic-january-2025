@@ -16,13 +16,14 @@
                     </div>
 
                 </div>
-
                 <p class="disc">Description: {{movie.description}}</p>
+                {{#if isCreator}}
                 <div class="details-btn">
-                    <button id="edit-button">Edit</button>
-                    <button id="delete-button">Delete</button>
+                    <a href="/movie/{{movie._id}}/edit" class="details">Edit</a>
+                    <a href="/movie/{{movie._id}}/delete " class="details">Delete</a>
                     <a href="/cast/attach/{{movie._id}} " class="details">Attach</a>
                 </div>
+                {{/if}}
             </div>
         </div>
         <div class="card_right">

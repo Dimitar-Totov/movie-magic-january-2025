@@ -20,9 +20,10 @@ router.post('/create', async (req, res) => {
 router.get('/:movieId/details', async(req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId);
+    const isCreator = req.user.id == movie.creator;
 
     movie.ratingView = getRatingData(movie.rating);
-    res.render('movies/details', { movie })
+    res.render('movies/details', { movie, isCreator})
 
 });
 
