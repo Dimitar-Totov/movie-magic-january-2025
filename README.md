@@ -26,3 +26,4 @@ JavaScript Back-End Course Workshop @SoftUni
 19. Install cookie parser
 20. Install bcrypt
 21. Install jswebtoken
+22. Install dotenv
