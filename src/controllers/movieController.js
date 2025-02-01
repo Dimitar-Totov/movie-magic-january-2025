@@ -37,9 +37,18 @@ router.get('/search', async (req, res) => {
 
 router.get('/:movieId/delete',async (req,res) => {
     const movieId = req.params.movieId;
+    const movie = await movieService.getOne(movieId);
+    if(!movie.creator?.equals(req.user?.id)){
+        return res.redirect('/404');
+    }
+
     await movieService.remove(movieId);
-    
+
     res.redirect('/');
+});
+
+router.get('/:movieId/edit',(req,res) => {
+    res.render('movies/edit');
 });
 
 
