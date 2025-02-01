@@ -16,6 +16,8 @@ export const authMiddleware = (req, res, next) => {
 
         next();
     } catch(err){
-
+        //* If token is expired...
+        res.clearCookie('auth');
+        res.redirect('/auth/login');
     }
 }
