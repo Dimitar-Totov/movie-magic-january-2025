@@ -1,7 +1,6 @@
 import { Router } from "express";
 import movieService from "../services/movieService.js";
 import Movie from "../models/Movie.js";
-import castService from '../services/castService.js'
 
 const router = Router();
 
@@ -10,13 +9,18 @@ router.get('/create', (req, res) => {
 });
 
 router.post('/create', async (req, res) => {
-    await Movie.create(req.body);
+    const newMovie = req.body;
+    const userId = req.user.id;
+
+    await movieService.create(newMovie,userId);
+
     res.redirect('/');
 });
 
 router.get('/:movieId/details', async(req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId);
+
     movie.ratingView = getRatingData(movie.rating);
     res.render('movies/details', { movie })
 

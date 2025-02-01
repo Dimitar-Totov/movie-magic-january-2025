@@ -18,10 +18,20 @@ const getAll = (filter = {}) => {
     return query;
 };
 
+const create = (movieData,creatorId) => {
+    const result = Movie.create({
+        ...movieData,
+        rating: Number(movieData.rating),
+        year: Number(movieData.year),
+        creator: creatorId
+    });
+    return result;
+}
 
 const getOne = (movieId) => Movie.findById(movieId,{},{lean: true}).populate('casts');
 
 export default {
     getAll,
-    getOne
+    getOne,
+    create
 }
