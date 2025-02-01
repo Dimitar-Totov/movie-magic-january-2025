@@ -27,3 +27,4 @@ JavaScript Back-End Course Workshop @SoftUni
 20. Install bcrypt
 21. Install jswebtoken
 22. Install dotenv
+23. Install validator
