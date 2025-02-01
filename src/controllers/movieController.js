@@ -54,6 +54,15 @@ router.get('/:movieId/edit',async (req,res) => {
     res.render('movies/edit', {movie});
 });
 
+router.post('/:movieId/edit',async (req,res) => {
+    const movieId = req.params.movieId;
+    const movieData = req.body;
+
+    await movieService.update(movieId,movieData);
+
+    res.redirect(`/movies/${movieId}/details`)
+});
+
 
 function getRatingData(rating) {
 
