@@ -35,6 +35,13 @@ router.get('/search', async (req, res) => {
     res.render('home', { isSearch: true, movies, filter });
 });
 
+router.get('/:movieId/delete',async (req,res) => {
+    const movieId = req.params.movieId;
+    await movieService.remove(movieId);
+    
+    res.redirect('/');
+});
+
 
 function getRatingData(rating) {
 

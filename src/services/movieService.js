@@ -28,10 +28,13 @@ const create = (movieData,creatorId) => {
     return result;
 }
 
+const remove = (movieId) => Movie.findByIdAndDelete(movieId);
+
 const getOne = (movieId) => Movie.findById(movieId,{},{lean: true}).populate('casts');
 
 export default {
     getAll,
     getOne,
-    create
+    create,
+    remove
 }
