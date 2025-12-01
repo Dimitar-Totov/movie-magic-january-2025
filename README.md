@@ -1,8 +1,10 @@
 # movie-magic-january-2025
 JavaScript Back-End Course Workshop @SoftUni
 
-## Start project
-`npm run dev` - for developing
+## Starting project
+`npm install` - to install node modules
+`cd .\src\` - change directory to app folder
+`npm run dev` - run localhost app
 
 ## Developing steps
 1. Inital Project Architecture
