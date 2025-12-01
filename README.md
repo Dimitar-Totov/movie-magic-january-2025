@@ -32,3 +32,12 @@ JavaScript Back-End Course Workshop @SoftUni
 21. Install jswebtoken
 22. Install dotenv
 23. Install validator
+
+<img width="2558" height="1304" alt="Screenshot 2025-12-01 232815" src="https://github.com/user-attachments/assets/367edad9-c04a-4749-997d-15043f8dded9" />
+
+<img width="2553" height="1304" alt="Screenshot 2025-12-01 233709" src="https://github.com/user-attachments/assets/ca95462d-8a1b-4dce-bec5-38464d542b9a" />
+
+<img width="2556" height="1304" alt="Screenshot 2025-12-01 233807" src="https://github.com/user-attachments/assets/96f5c843-74fa-4fb5-93e2-13c1eb9e146c" />
+
+<img width="2555" height="1302" alt="Screenshot 2025-12-01 233751" src="https://github.com/user-attachments/assets/49554550-520b-4b88-b45d-5f3a15f2db4a" />
+
