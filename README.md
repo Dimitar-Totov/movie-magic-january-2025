@@ -2,10 +2,10 @@
 JavaScript Back-End Course Workshop @SoftUni
 
 ## Starting project
-open terminal
-npm install
-cd ./src
-npm run dev
+1. open terminal
+2. npm install
+3. cd ./src
+4. npm run dev
 
 
 ## Developing steps
