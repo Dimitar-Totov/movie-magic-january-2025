@@ -2,9 +2,11 @@
 JavaScript Back-End Course Workshop @SoftUni
 
 ## Starting project
-`npm install` - to install node modules
-`cd .\src\` - change directory to app folder
-`npm run dev` - run localhost app
+open terminal
+npm install
+cd ./src
+npm run dev
+
 
 ## Developing steps
 1. Inital Project Architecture
